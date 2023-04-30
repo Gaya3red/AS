@@ -1,0 +1,48 @@
+#question1
+print("Available Books : ")
+print("Book 1 - Introduction to Programming : Rs.499.00")
+print("Book 2 - Python Libraries Cookbook : Rs.855.00")
+print("Book 3 - Data Science in Python : Rs.645.00")
+print("GST : 12%")
+print("Delivery Charges : Rs.250")
+print("_________________\n")
+
+# taking input from user 
+print("Enter Number of copies of Book 1 : ",end="")
+book1 = int(input())
+print("Enter Number of copies of Book 2 : ",end="")
+book2 = int(input())
+print("Enter Number of copies of Book 3 : ",end="")
+book3 = int(input())
+print("Do You want the book to be delivered (y/n) : ",end="")
+choice = input()
+
+# calculation 
+delivery_cost = 250
+total_cost = (book1 * 499.00) + (book2 * 855.00) + (book3 * 645.00)
+gst = 12/100*total_cost
+cost_after_tax = total_cost + gst
+if(choice == 'y'):
+    cost_after_tax += delivery_cost
+    
+#result
+print("Total Invoice Amount : ", cost_after_tax)
+
+
+
+#question2
+#taking input from user
+word = input("string1 = ")
+word = word.lower()
+l = []
+for i in word:
+    if i in l:
+        pass
+    else:
+        l.append(i)
+n = len(l)
+# result
+print("uniqueLetters = ",end="")
+for i in range(n-1):
+    print(l[i],end=",")
+print(l[n-1])
